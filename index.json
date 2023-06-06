@@ -1,0 +1,177 @@
+{
+  "getById": [
+    
+    {
+      "profilePictureFileString": "string",
+      "emailId": "string",
+      "firstName": "string",
+      "lastName": "string",
+      "phoneNumber": "string",
+      "designation": {
+        "id": 0,
+        "name": "string"
+      },
+      "modeOfWork": {
+        "id": 0,
+        "name": "string"
+      },
+      "city": {
+        "id": 0,
+        "name": "string"
+      },
+      "floor": {
+        "id": 0,
+        "name": "string"
+      },
+      "column": {
+        "id": 0,
+        "name": "string"
+      },
+      "seat": {
+        "id": 0,
+        "seatNumber": 0,
+        "booked": true
+      },
+      "days": 
+        {
+          "id": 0,
+          "day": "string"
+        }
+    }
+        
+  ],
+
+    
+  
+  "seat":  [
+        {
+          "id": 0,
+          "seatNumber": 0,
+          "booked": true
+        },
+        {
+          "id": 1,
+          "seatNumber": 1,
+          "booked": true
+        },
+         {
+          "id": 2,
+          "seatNumber": 2,
+          "booked": false
+        }
+      ],
+
+      
+  "floor":  [
+    {
+      "id": 0,
+      "name": "1",
+      
+    },
+    {
+      "id": 1,
+            "name": "2"
+    },
+     {
+      "id": 2,
+      "name": "3"
+    },
+    {
+      "id": 3,
+      "name": "4"
+    },
+    {
+      "id": 4,
+      "name": "5"
+    }
+  ],
+
+  "column" :[
+    {
+      "id": 0,
+      "name": "A"
+    },
+    {
+      "id": 1,
+      "name": "B"
+    },
+    {
+      "id": 2,
+      "name": "C"
+    },
+    {
+      "id": 3,
+      "name": "D"
+    },
+    {
+      "id": 4,
+      "name": "E"
+    }
+  ],
+
+  "mode-of-work" : [
+    {
+      
+      "id": 0,
+      "name": "Hybrid"
+    },
+    {
+      
+      "id": 1,
+      "name": "Work from home"
+    },
+    {
+      
+      "id": 2,
+      "name": "Regular"
+    }
+  ],
+
+
+  "designation" : [
+  {
+    "id": 0,
+    "name": "BA"
+  },
+  {
+    "id": 1,
+    "name": "PM"
+  },
+  {
+    "id": 2,
+    "name": "Infra"
+  },
+  {
+    "id": 3,
+    "name": "Devops"
+  },
+  {
+    "id": 4,
+    "name": "QA"
+  },
+  {
+    "id": 5,
+    "name": "UI/UX"
+  },
+  {
+    "id": 6,
+    "name": "Backend"
+  }
+  ],
+
+  "cities" : [
+    {
+      "id": 0,
+      "name": "valsad",
+
+    },
+    {
+      "id": 1,
+      "name": "surat"
+    }
+    
+  ]
+
+  
+
+}

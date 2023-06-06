@@ -2,9 +2,9 @@
 
 <form [formGroup] = "creatProfileForm">
 
-    <label>City</label>
-  <select  formControlName="city" (change) = "onChangeCity($event)">
-    <option value="" selected disabled>Select City</option>
+     <label>City</label>
+  <select  formControlName="cities" [ngModel]="selectedCity.id">
+    <option value="" selected disabled>Select City</option> 
     <option *ngFor="let city of cities" [value]="city.id">{{city.name}}</option> 
   
   </select><br>
@@ -17,7 +17,7 @@
   </select><br>
 
   <label >Column</label>
-  <select  formControlName="column" (change) = "onChangecolumn($event)">
+  <select  formControlName="column" >
     <option value="" selected disabled>Select Column</option>
      <option *ngFor="let column of columns" [value]="columns.id">{{column.name}}</option> 
   
@@ -28,5 +28,5 @@
     <option value="" selected disabled>Select Seat</option>
     <option *ngfor = "let seat of seats" [value]="seat.id">{{seat.name}}</option>
   
-  </select><br>
+  </select><br> 
 </form>

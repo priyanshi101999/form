@@ -11,31 +11,39 @@ import { FormService } from '../form.service';
 export class FormComponent implements OnInit{
 
   creatProfileForm!: FormGroup;
- cities!: any;
+ cities: Array<any> = [];
  floors!: any;
  columns!: any;
  seats!: any;
+ selectedCity : any = {
+
+  id: 0,
+  name: ''
+ }
 
 
 
 
   constructor(private formService: FormService) {
+
+
+    this.creatProfileForm = new FormGroup({
+      cities: new FormControl(''),
+      floor: new FormControl(''),
+      column: new FormControl(''),
+      seat: new FormControl(''),
+      
+     })
+    
 }
   ngOnInit(): void {
+this.formService.getCities().subscribe((data:any)=>{
+  this.cities = data;
 
+  console.log(this.cities)
+  
+})
 
-    this.formService.getCities().subscribe((cities) => {
-      this.cities = cities})
-      ;
-
-
-   this.creatProfileForm = new FormGroup({
-    city: new FormControl(''),
-    floor: new FormControl(''),
-    column: new FormControl(''),
-    seat: new FormControl(''),
-    
-   })
   }
 
   onChangeCity(event: Event){
@@ -90,7 +98,7 @@ onChangecolumn(event : Event) {
   this.seats = null;
 }
 }
-}
+
 
 
 
@@ -100,11 +108,5 @@ onChangecolumn(event : Event) {
 
 
 
-// function onChangeColumn(event: Event | undefined, Event: { new(type: string, eventInitDict?: EventInit | undefined): Event; prototype: Event; readonly NONE: 0; readonly CAPTURING_PHASE: 1; readonly AT_TARGET: 2; readonly BUBBLING_PHASE: 3; }) {
-//   throw new Error('Function not implemented.');
-// }
 
-// function onChangeFloor(event: Event | undefined, Event: { new(type: string, eventInitDict?: EventInit | undefined): Event; prototype: Event; readonly NONE: 0; readonly CAPTURING_PHASE: 1; readonly AT_TARGET: 2; readonly BUBBLING_PHASE: 3; }) {
-//   throw new Error('Function not implemented.');
-// }
-
+}
